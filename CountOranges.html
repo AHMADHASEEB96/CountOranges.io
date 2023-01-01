@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Count oranges </title>
+    
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel = "stylesheet" href = "css/CountOranges.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link href="css/fontawesome.css" rel="stylesheet">
+  <link href="css/brands.css" rel="stylesheet">
+  <link href="css/solid.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;300;400;500;700&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    
+  <main>
+    <!--  <button id = "reset"> Reset </button> -->
+      
+      <img src = "media/images/orangeLobe.png" id = "lobe1">
+        <img src = "media/images/orangeLobe.png" id = "lobe2">
+     <!-- <img src = "edia/images/orangeBg.png" id = "orange-bg"> --> 
+      <section id = "question-board">
+          
+              
+                <h1 id = "adress">
+                    Count Oranges 
+                </h1>
+                <div id = "question">
+                    <h4 id = "if"> if </h4>
+                    <div id = "oranges">
+                       
+                    </div>
+                    <h4 id = "word-oranges"> Oranges </h4>
+                </div>
+                <p id = "question-sequel">
+                    Devided by <span id = 'devided-by'> 2 </span> persons, how many oranges each one takes ?
+                </p>
+                <p id = "choose-and-submit"> Choose an answer then submit </p>
+                <div id = "input-board">
+               <!--    <h4> How many ? </h4> -->
+                   <button id = "submit"> Submit </button> 
+                   <input type ="number" class = "answer-input guess" placeholder = "How many?"/>
+                   
+                   <div id = "choose-answer-spans">
+                       <span>1</span>
+                       <span> 2 </span>
+                       <span> 3 </span>
+                       <span> 4 </span>
+                       <span> 5 </span>
+                       <span> 6 </span>
+                       <span> 7 </span>
+                       <span> 8 </span>
+                       <span> 9 </span>
+                       <span> 10 </span>  
+                                          
+                   </div>
+                   <button id = "plus-halve"> + 0.5 </button>  
+                   
+                </div>
+                
+          
+          
+      </section>
+      
+      <section id = "results-board">
+          
+          <div id = "results-text"> 
+              <h1 id = "result"> You <span id = "almost" class = "isplayNone"> almost </span> got it <span id = "right-wrong">  </span></h1>
+              <p id = "result-discreption">
+                  MAKE YOUR GUESS
+              </p>
+              <div id = "resulted-oranges">
+                  
+              </div>
+              <h1 id = "word-oranges"> oranges </h1>
+              </div>
+              <div id = "show-answer" class = 'displayNone'>
+                 <p>  <span id = "toggle-answer"> Show </span>  answer  </p>
+                  <span id = "right-answer"> 3 </span>
+              </div>
+              <i class="fa-solid fa-square-caret-down reveal-result "></i>
+          </section>
+          
+          
+          <div class = "haseeb">
+               <i class="fa-solid fa-caret-up reveal-my-info  "></i>
+              <p> This app is completely Imagined, Designed, and coded by</p>
+              <h1> AHMAD M.HASEEB </h1>
+              
+              
+               <!-- Start Icons  --> 
+    <div class = "social-icons">
+        
+            <div class = "icons">
+                <a href = "https://www.facebook.com/Alphauseracc" target = "_blank"><i class="fab fa-facebook-f"></i></a>
+        
+         <a href = "https://github.com/AHMADHASEEB96"><i class="fab fa-github"></i></a>
+         <a href = "https://www.linkedin.com/in/ahmad-m-haseeb-4a0333219/"><i class="fab fa-linkedin"></i></a>
+         <a href = "https:/wa.me/+201555807058"><i class="fab fa-whatsapp"></i></a>
+         <a href = "mailto:amduseracc@gmail.com"><i class="fas fa-envelope"></i></a>
+         <a href = "tel:201555807058"><i class="fas fa-phone"></i></a>
+         
+       
+            </div>
+                            
+        
+    </div>
+    
+    
+          </div>
+          
+          <span id = "flash-answer" class = "displayNone"> 1 </span>
+  </main>
+  <script src = "CountOranges.js"></script>
+</body>
+</html>

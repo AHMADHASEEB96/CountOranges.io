@@ -1,0 +1,686 @@
+
+
+
+
+:root {
+    --bg-color :  #EED284;
+    --h1-font-size: 50px;
+    --h4-font-size: 30px;
+    --text-font-size: 17px;
+     --borders: 3px solid black;
+  }
+  
+  * {
+      margin : 0;
+      padding : 0;
+      box-sizing: border-box; 
+      transition:.4s;
+      
+      
+  }
+  body {
+      
+  }
+  
+  .container {
+      padding : 15px;
+      
+  }
+  
+  a {
+      text-decoration: none;
+  }
+  
+  ul, ol {
+      list-style: none;
+  }
+  
+  
+  h1, h4 {
+      font-family: 'Antonio', sans-serif;
+  }
+  h1 {
+      font-size : var(--h1-font-size);
+  }
+  
+  h4 {
+      font-size : var(--h4-font-size);
+  }
+  
+  p {
+      font-family: 'Cairo', sans-serif;
+  } 
+  
+  #question-board, #results-board, .reveal-result, #show-answer, .haseeb, .reveal-my-info {
+      -webkit-transition:.5s; 
+      -moz-transition:;
+      -ms-transition:;
+      -o-transition:;
+        
+   }
+  
+   /* js generla classes  */
+  
+   .displayNone {
+      display: none;
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  
+  main {
+      position: relative; 
+      width: 100vw;
+      height : 100vh;
+     
+      background-image : url("orangeBg.png");
+      z-index: 1; /* if negative , input are disabled */
+      overflow: hidden;
+      ackground-color: black;
+        }
+  
+  #question-board {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 35%;
+      left: 50%;
+      width: 35%;
+      height: 45%;
+      background-color: var(--bg-color);
+      padding: 15px;
+      z-index: 2;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+}
+  
+   
+   
+  
+  
+ /* js classes */ 
+  
+  .qb-Transform {
+       transform: translate(-100%, -50%) !important;
+       -webkit-transform: translate(-100%, -50%) !important;
+       -moz-transform: translate(-100%, -50%) !important;
+       -ms-transform: translate(-100%, -50%) !important;
+       -o-transform: translate(-100%, -50%) !important;
+  }
+  
+  .qb-Transform-mobile {
+     transform: translate(-50%, -80%) !important;    
+  }
+  
+  #question-board #adress, #question, #question-sequel, #input-board {
+      
+      padding: 10px ;
+  }
+  #question-board #adress {
+      text-align: center;
+      /* height : 10%;  fixing the height makes it not flexible to control the element it disables the height to fit the  content */
+      margin: 10px 0;
+  }
+  
+  #question-board #question {
+      height : 50%;
+      border: var(--borders); 
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; 
+  }
+  
+  #question-board #question #oranges {
+      text-align: center;
+      
+  }
+  
+  #question-board #question #oranges span {
+      font-size: 40px;
+      transition:0.3s;
+        }
+  
+  #question-board #question #oranges span:hover {
+      font-size: 50px;
+  }
+      
+  
+  
+  
+  #question-board #question-sequel {
+      /* height : 5%; to make it`s height fit the content  */
+      text-align: center; 
+  }
+  
+  #choose-and-submit {
+      font-size : 10px;
+      text-align: center;
+      color: black;
+      
+      margin-top: -5px;
+       }
+       
+       choose-answer span:hover  {
+           color: red;
+           font-size: 1.2em;           
+       }
+       
+       .reveal-choosen-answer {
+           color : #387C60;
+           font-size: 1.2em;       
+       }
+       
+       
+       
+  /* only use a fixed height when its nesscery and only with certain elements not arbitrary, instead use flex to distribute evenly  */
+  #question-board #question-sequel #devided-by {
+      font-size: 20px;
+      color : orangered;
+      padding : 0 10px;
+  }
+  
+   #input-board {
+      height : 20%;
+      
+      background-color: var(--bg-color);   
+      position: absolute;
+      bottom : -25%;
+      width : 88%;
+      z-index: 998;
+      left : 50%;
+      transform: translate(-50%, -50%);
+      
+      
+  }
+  
+  #input-board h4:first-child {
+      color: red ;
+  }
+  #input-board #submit {
+      background: transparent;
+      padding: 5px;
+      font-size: 35px;
+      font-family: 'Antonio', sans-serif;
+      border: none;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      left: 50%;
+      transform: translate(-50% , -40%);
+      /*margin: 16px 0 ;
+      marginsdonttakeeffectwithpositionabsolute*//*box-shadow: -1px -1px 1px rgba( 94, 104, 121, .288), 1px 1px 1px rgba( 94, 104, 121, .288);
+      */border-radius: 6px;
+      -webkit-transform: translate(-50% , -40%);
+      -moz-transform: translate(-50% , -40%);
+      -ms-transform: translate(-50% , -40%);
+      -o-transform: translate(-50% , -40%);
+}
+  
+  #input-board #submit:hover {
+      color: red;
+      font-size: 2.5em;
+}
+  
+  #input-board input {
+      background-color: var(--bg-color);
+      border : none;
+      border: var(--borders);
+      height : 70%;
+      width: 50%;
+      position: absolute;
+      bottom : -30%;    
+      left: 50%;
+      transform: translateX(-50%);
+      outline : none;
+      font-size:  var(--h1-font-size);  
+      text-align: center; 
+      z-index: 999;
+  }
+  
+  
+  #input-board input::placeholder {
+      color: black ;
+      font-size: 40px;
+      font-family: 'Antonio', sans-serif;: 
+  }
+  
+  #input-board input:focus {
+      border-bottom: 2px solid red ;
+  }
+  #choose-answer-spans, #plus-halve  {
+      display: none;
+  }
+ 
+  .reveal-result {
+      font-size: 65px;
+      
+      
+      position: absolute;
+      top :0;    
+      right: -65px;
+      
+      
+      color : #387C60;
+      
+      z-index: 999;
+      cursor: pointer;
+      
+  }
+  
+  
+  .reveal-result:hover {
+      color: red;
+  }
+  
+  /* js class */
+  .rotate-reveal-result {
+      transform:rotate(180deg);
+      -moz-transform:rotate(180deg);
+      -ms-transform:rotate(180deg);
+      -o-transform:rotate(180deg);
+      -webkit-transform:rotate(180deg);
+      
+  
+  }
+  
+  .rotate-reveal-result-mobile {
+      transform: translate(-50%, -50%) rotate(180deg) !important;
+      /* rotate only neglects the translate transformation in the original state,  so both are used here */
+      -moz-transform:rotate(180deg);
+      -ms-transform:rotate(180deg);
+      -o-transform:rotate(180deg);
+      -webkit-transform:rotate(180deg);
+      top : 107% !important;
+  }
+  
+  #results-board {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 35%;
+      left: 50%;
+      width: 35%;
+      height: 45%;
+      background-color: var(--bg-color);
+      padding: 15px;
+      z-index: 0;
+      text-align: center;
+    
+  }
+  
+  /* hs classes */
+  .rb-Transform {
+      transform: translate(0, -50%) !important;
+      -webkit-transform: translate(0, -50%) !important;
+      -moz-transform: translate(0, -50%) !important;
+      -ms-transform: translate(0, -50%) !important;
+      -o-transform: translate(0, -50%) !important;
+  }
+  
+  .rb-Transform-mobile {
+      transform: translate(-50%, 5%) !important;
+  }
+   
+  #results-board #results-text {
+      margin : auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -35%);
+      
+  }
+  
+  #results-board  #resulted-oranges {
+      margin : 10px auto;
+          
+  }
+  
+  #results-board  #resulted-oranges span {
+      font-size: 40px;
+
+  }
+  
+
+  #results-board  #resulted-oranges span:hover {
+    font-size : 50px;
+  }
+
+
+  #results-board #result span {
+      color : #387C60;
+  }
+  
+  #results-board #show-answer {
+      background-color: 1px solid black; 
+      background-color: var(--bg-color);    
+      position :absolute; 
+      right : 0;
+      bottom: 0;
+      transform: translateY(103%);
+      padding : 5px;
+      overflow: hidden;
+      height : 40px; /* make it originally fits the text show answer */
+      z-index: 1;/* hidden untill the results board is revealed */
+      cursor: pointer;
+  }
+  
+  #results-board #show-answer p {
+    height : 35px;
+    font-weight: bold;
+  }
+  
+  #results-board #show-answer #right-answer {
+      margin : 10px ;
+      font-size: var(--h1-font-size);
+      display: block;
+      transition:.5s;
+      
+        }
+  
+  /* js */
+  
+  .toggle-answer {
+      height :fit-content  !important;  /*  now make it fit the whole content of hte box */
+      transition: 0.3s; 
+  }
+  
+  #lobe1, #lobe2 {
+      width : 1400px;
+      position : absolute;
+      padding: 0;
+      margin : 0;
+      
+      
+  }
+  
+  #lobe1/*  */{
+      left : -400px;
+      bottom : -300px;
+      z-index: -999;    
+  }
+  
+  #lobe2 {
+      right : -400px;
+      top: -300px;
+      transform: rotate(180deg);    
+    /*  transform: rotatex(180deg);   */ 
+    z-index: -999;    
+  }
+  
+  .haseeb {
+      position: absolute;
+      bottom : -115px;
+      height : 130px;
+      width : 350px;
+      left : 50%;
+      transform: translateX(-50%);
+      background-color: var(--bg-color);
+      padding : 20px;
+      text-align: center;
+      padding : auto;
+      
+  }
+   .haseeb p {
+       margin: 0;
+       padding:0 ;
+       font-size: 13px;
+   }
+  
+   .haseeb h1 {
+       font-size:25px;
+       transform: uppercase;
+       margin: 5px;
+       padding:0 ;
+       color:#387C60;
+       -webkit-transform:;
+       -moz-transform:;
+       -ms-transform:;
+       -o-transform:;
+}
+  
+  .reveal-my-info {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 55px;    
+  }
+  
+  /* js class */
+  
+  .reveal-info {
+      bottom: -5px;
+  }
+
+  .fa-caret-down {
+    margin-bottom : 10px;
+    top: -20px;
+    color : var(--bg-color);
+    padding : 10px;
+  }
+
+
+
+
+/* Social icons */
+
+.social-icons {
+   
+    position: absolute;
+    bottom: 20px;
+    width : 100%;
+    
+}
+
+
+.social-icons .icons {
+    display: flex; 
+    justify-content: space-between;
+     
+     width : 90%;
+    
+}
+
+
+.social-icons i {
+    font-size: 1em;
+    color: black;
+   
+    padding : 0px;
+    
+    transition-duration: 0.5s;
+}
+
+.social-icons i:hover {
+   
+   transform: translateX(3px);
+   font-size: 1.2em;
+}
+
+
+#choose-answer {
+    display : none; /* to hide in desktop,
+    dont use that in inline styling it disables it too in media query,
+    even if display is flex , but remember , inline styling has the priority */
+}
+@media(max-width : 767px) {
+        #question-board {
+            width : 80%;
+        }
+        
+   /*    #input-board {
+       position : relative;
+           bottom : -15%;
+           height : fit-content ;
+           display: flex;
+           flex-direction:  column;
+           
+           justify-content: center;
+            align-items: center;  
+            padding : 10px;      
+           border: 1px solid white; 
+           } */
+           
+           #input-board {
+       position : relative;
+           bottom : -15%;
+           height : fit-content ;
+           display: flex;
+           flex-direction:  column;
+           
+           justify-content: center;
+            align-items: center;  
+            padding : 5px;      
+            
+           } 
+         
+       input {
+           display: none;
+       }
+       
+       
+      
+  
+  
+       #input-board #submit {
+           text-align: center;
+           position: static;
+           padding: 5px;
+           margin : 5px;
+           font-size: 30px;
+           
+          
+           transform: translatex(0%);
+           
+           }
+           
+       .reveal-result {
+       font-size: 65px;
+      
+      
+      position: absolute;
+      top :125%; /* move it downward more, to be below the input board*/  
+      left: 50%;
+      transform: translate(-50%, -50%); /* to center it laterally*/
+      width: fit-content; 
+      height : fit-content; 
+      
+      color : #387C60;
+      
+      
+      cursor: pointer;
+      
+           
+                                 }
+        #results-board {
+            width : 80%;
+            
+                  }
+        
+        #results-text {
+            
+            width : 100%;
+            padding : 15px;
+            text-align: center;
+                    }
+        
+        #resulted-oranges {
+            
+            width : 100%;
+            
+            margin : 0;
+            
+        }       
+         
+        #results-board #result {
+            font-size: 30px;
+            
+        }
+        
+        #resutl {
+            
+        }
+        
+        #word-oranges {
+            margin: 0;
+        }
+        
+        #right-answer {
+            transition:.5s;
+        }
+        
+        
+        
+        
+        
+        
+        
+            
+            
+            
+            
+            #choose-answer-spans {
+        
+        width : 90%;
+         margin : 5px;
+        
+        font-family: 'Antonio', sans-serif;
+            display : flex ;
+            justify-content: space-between;
+                       
+            
+            }
+            
+            #plus-halve {
+    display: block;
+    border: none;
+    margin-left: -8px;
+    border-bottom: 1px solid black; 
+    background-color: transparent;
+    border-radius : 2px;
+    font-family: 'Antonio', sans-serif;
+    
+    
+    
+}
+   }
+
+
+#flash-answer {
+    position: absolute;
+    top: 20%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    font-size: 250px;
+    color : #387C60;
+    z-index: 10000;
+    transition: .3s;
+    font-family: 'Antonio', sans-serif;
+    
+}
+
+
+/* js class */
+
+.more-size {
+    font-size: 350px;
+    transition: .3s;
+}
+
+
